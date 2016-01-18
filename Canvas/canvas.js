@@ -66,6 +66,34 @@ function iniciar() {
     // Pintamos el triangulo (con fill no se necesita closepath())
     lienzo.fill();
     
+    ///// UTILIZANDO CLIP ////////
+    
+    // Comenzamos el dibujo
+    lienzo.beginPath(); 
+    
+    // Movemos el lapiz al punto de partida del triangulo para el clip
+    lienzo.moveTo(650,100); 
+    // Hacemos una linea desde el punto de origen
+    lienzo.lineTo(550,200);
+    // Hacemos otra desde el punto de origen 
+    lienzo.lineTo(750,200); 
+    
+    // Hacemos un clip al triangulo
+    lienzo.clip(); 
+    
+    // Cerramos el dibujo
+    lienzo.beginPath(); 
+    
+    // Este for pinta todo el lienzo entero de lineas cada 10 pixeles
+    for(var i = 0; i < 1000; i = i + 10) { 
+        lienzo.moveTo(0, i); 
+        lienzo.lineTo(1000, i); 
+    } 
+    
+    // Pintamos las lineas
+    lienzo.stroke();
+    
+    
 } 
 
 // Esto es lo mismo que window.onload = iniciar()
