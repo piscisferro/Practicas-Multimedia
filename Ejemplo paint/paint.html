@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Examen Multimedia</title>
+
+<script src="Paint.js"></script>
+<style type="text/css">
+
+#cajalienzo {
+	width: 950px;
+	height: 400px;
+
+	padding-left: 20px;
+	padding-top: 20px;
+	position: relative;
+	left:200px;
+	background-color: #eee;
+}
+#lienzo
+{
+	background-color: white;
+    box-shadow: 0 0 8px 2px #555;
+	display: block;
+}
+	
+
+</style>
+</head>
+
+<body>
+	<audio preload="auto" autobuffer id="audio">
+	 
+	  <source src="lapiz.mp3"/>
+	   <source src="lapiz.ogg"/>     
+	</audio>
+
+	 <div id="cajalienzo">
+	 			<img src="borrar.png" id="borrar" width="40" height="40">
+	            <img src="verde.png"  id="verde"width="40" height="40">
+	            <img src="rojo.png"  id="rojo" width="40" height="40">
+	            <img src="azul.png"  id="azul"width="40" height="40">
+	            <img src="perro.gif"  id="perro"width="40" height="40">
+	        <canvas id="lienzo" width="900" height="300">
+	        	Su navegador no soporta el elemento canvas
+	 		</canvas>
+	 </div>
+
+
+</body>
+</html>
