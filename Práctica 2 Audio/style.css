@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#contenedor {
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+
+#reproductor {
+	
+    display: block;
+    margin: 25px auto;
+    width: 300px;
+    border: 2px solid black;
+    border-radius: 50px;
+    background: linear-gradient(to bottom, #292929 0%, #9a9a9a 20%, #292929 50%);
+}
+
+h3 {
+    
+    text-align: center;
+    color: white;
+    margin: 0 auto;
+    margin-top:10px;
+    border-bottom: 2px solid black;
+    width: 210px;
+    
+}
+
+#tiempo {
+	
+    width: 100%;
+    
+}
+
+#tiempoActual {
+	margin-left: 50px;
+}
+
+
+#duracion {
+	margin-left: 150px;
+}
+
+#botonera {
+	text-align: center;
+    
+    margin: 5px 0;
+}
+
+button {
+    
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 100%;
+    
+}
+
+#imagen {
+    
+    width: 100px;
+    height: 90px;
+    margin: 0 auto;
+    background-image: url(altavoz.png);
+    
+}
+
+#play {
+    
+    background-image: url("btns.png");
+    background-repeat: no-repeat;
+    background-position: -3px -4px;
+    
+}
+
+#play:active {
+    
+    background-image: url("btns.png");
+    background-repeat: no-repeat;
+    background-position: -3px -44px;
+    
+}
+
+#pause {
+    
+    background-image: url("btns.png");
+    background-repeat: no-repeat;
+    background-position: -43px -4px;
+    
+}
+
+#pause:active {
+    
+    background-image: url("btns.png");
+    background-repeat: no-repeat;
+    background-position: -43px -44px;
+    
+}
+
+#stop {
+    
+    background-image: url("btns.png");
+    background-repeat: no-repeat;
+    background-position: -82px -4px;
+    
+}
+
+#stop:active {
+ 
+    background-image: url("btns.png");
+    background-repeat: no-repeat;
+    background-position: -82px -44px;
+    
+}
+
+#VolUp {
+    
+    background-image: url("btns.png");
+    background-repeat: no-repeat;
+    background-position: -122px -4px;
+    
+}
+
+#VolUp:active {
+ 
+    background-image: url("btns.png");
+    background-repeat: no-repeat;
+    background-position: -122px -44px;
+    
+}
+
+#VolDown {
+    background-image: url("btns.png");
+    background-repeat: no-repeat;
+    background-position: -162px -4px;
+    
+}
+
+#VolDown:active {
+    background-image: url("btns.png");
+    background-repeat: no-repeat;
+    background-position: -162px -44px;
+}

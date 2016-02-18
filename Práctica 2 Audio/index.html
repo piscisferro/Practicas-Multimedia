@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Reproductor</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        
+        
+        <script>
+        
+            var intervalo;
+            var player;
+            
+            window.onload = function() {
+                
+                player = document.getElementById("player");
+                
+                document.getElementById("play").onclick = play;
+                document.getElementById("pause").onclick = pause;
+                document.getElementById("stop").onclick = stop;
+                
+                document.getElementById("VolUp").onclick = function() { player.volume += 0.1; };
+                document.getElementById("VolDown").onclick = function() { player.volume -= 0.1; };
+                
+                currentTime = document.getElementById("player").currentTime;
+                var finalTimeSeconds = document.getElementById("player").duration;
+                
+                var finalTimeMinutes = Math.floor(finalTimeSeconds / 60);
+                finalTimeSeconds -= (finalTimeMinutes * 60);
+                finalTimeSeconds = Math.round(finalTimeSeconds);
+                
+                document.getElementById("duracion").innerHTML= finalTimeMinutes + ":" + finalTimeSeconds;
+            };
+            
+            function contadorSec() {
+                
+                var currentTime = player.currentTime;
+                
+                var currentTimeMinutes = Math.floor(currentTime / 60);
+                var currentTimeSeconds = currentTime - (currentTimeMinutes * 60);
+                currentTimeSeconds = Math.round(currentTimeSeconds);
+                
+                if (currentTimeSeconds < 10) {
+                    
+                    document.getElementById("tiempoActual").innerHTML= currentTimeMinutes + ":0" + currentTimeSeconds;
+                
+                } else {
+                    
+                    document.getElementById("tiempoActual").innerHTML= currentTimeMinutes + ":" + currentTimeSeconds;
+                }
+                
+                intervalo = setTimeout(contadorSec, 1000);
+                
+            }
+            
+            
+            function play() {
+                
+                player.play();
+                contadorSec();
+            }
+            
+            function pause() {
+                
+                clearTimeout(intervalo);
+                player.pause();
+            }
+         
+            function stop() {
+                
+                clearTimeout(intervalo);
+                player.pause();
+                player.currentTime = 0;
+                
+            }
+            
+        
+        </script>
+    </head>
+
+    <body>
+        <div id="contenedor">
+            <div id="reproductor">
+              <audio id="player" src="Bastards Of Bodom.mp3"></audio>
+               <h3>Reproductor</h3>
+               <div id="tiempo">
+                   <span id="tiempoActual">0:00</span><span id="duracion">0:00</span>
+               </div>
+               <div id="botonera">
+                  <button id="play"></button>
+                  <button id="pause"></button>
+                  <button id="stop"></button>
+                  <button id="VolUp"></button>
+                  <button id="VolDown"></button> 
+               </div>
+               <div id="imagen"></div>
+            </div>
+        </div>
+    </body>
+</html>

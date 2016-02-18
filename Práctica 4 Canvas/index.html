@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Bolita que rebota</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="canvas.js"></script>
+    </head>
+    
+    <body>
+       <audio id="audio">
+           <source src="sonido/burbuja.mp3">
+           <source src="sonido/burbuja.ogg">
+       </audio>
+        <div id="divVideo">
+            <video id="video" loop autoplay> 
+                <source src="video/nubes.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                <source src="video/nubes.mp4" type='video/ogg; codecs="theora, vorbis"'>
+                <source src="video/nubes.mp4" type='video/webm; codecs="vp8, vorbis"'>
+            </video>
+            <canvas id="lienzo" width="1280" height="720"></canvas>
+
+        </div>
+    </body>
+</html>
